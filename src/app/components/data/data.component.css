@@ -1,0 +1,264 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: rgb(255, 141, 141);
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+.body {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+nav {
+  box-shadow: 0px 0px 12px rgb(0, 0, 80);
+  height: 120%;
+  width: 5%;
+  border-radius: 10px;
+  background-image: linear-gradient(
+    111.4deg,
+    rgba(7, 7, 9, 1) 6.5%,
+    rgba(27, 24, 113, 1) 93.2%
+  );
+  padding: 20px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+nav > .logo {
+  background-image: url(/cloud.png);
+  background-size: cover;
+  height: 40px;
+  width: 40px;
+  filter: drop-shadow(1px 1px 2px rgb(0, 111, 147));
+}
+.navtools {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  height: 450px;
+}
+.navtools > div,
+.help {
+  border-radius: 10px;
+  height: 40px;
+  width: 40px;
+  /* background-color: black; */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+.navtools > div:hover {
+  border-radius: 50%;
+  background-color: rgba(240, 240, 240, 0.1);
+  transition: background-color;
+  transition-duration: 0.4s;
+}
+.dashboard {
+  background-image: url(/dashboard.png);
+}
+.hightlights {
+  background-image: url(/trifold.png);
+}
+.location {
+  background-image: url(/location.png);
+}
+.calender {
+  background-image: url(/calendar.png);
+}
+.settings {
+  background-image: url(/setting.png);
+}
+.help {
+  background-image: url(/handshake.png);
+}
+.contact {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.profile {
+  background-image: url(/profile.png);
+  height: 40px;
+  width: 40px;
+  background-size: cover;
+  border-radius: 50%;
+  filter: drop-shadow(1px 1px 3px rgb(0, 111, 147));
+}
+/* --------------------------------------------------------------------------------------------- */
+main {
+  height: 100%;
+  width: 95%;
+  box-shadow: 0px 0px 12px rgb(0, 0, 80);
+  border-radius: 20px;
+  background-image: url(/moon.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.cover {
+  background-image: linear-gradient(
+    111.4deg,
+    rgba(7, 7, 9, 0.8) 6.5%,
+    rgba(27, 24, 113, 0.5) 93.2%
+  );
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  gap: 10px;
+}
+/* ----------------------------------------------------------------- */
+.day {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.week {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  gap: 10px;
+  padding: 10px 0px;
+}
+/* ------------------------------------------------------------------ */
+form {
+  display: flex;
+  gap: 20px;
+}
+input[type="search"] {
+  width: 95%;
+  font-size: 18px;
+  padding: 10px 25px 8px 25px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+  border: 0px solid white;
+  color: white;
+}
+input[type="search"]:focus {
+  outline: none;
+}
+/* ------------------------------------------------------------------- */
+input[type="text"] {
+  width: 25%;
+  font-size: 18px;
+  padding: 10px 25px 9px 25px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+  border: 0px solid white;
+  color: white;
+  text-align: center;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+/* -------------------------- */
+.SubmitBtn {
+  padding: 15px 20px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+.SubmitBtn:hover {
+  border-radius: 50%;
+  background-color: rgba(240, 240, 240, 0.23);
+  transition: background-color;
+  transition-duration: 0.4s;
+}
+/* -------------------------- */
+.info {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: auto auto;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  height: 40%;
+}
+.info > div {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.info > div:nth-child(2) {
+  justify-content: center;
+  align-items: center;
+}
+.place {
+  font-size: 45px;
+  font-weight: 700;
+}
+.weather-text {
+  /* background-color: yellow; */
+  height: 100px;
+  width: 100%;
+}
+.temperature {
+  justify-self: flex-end;
+  font-size: 50px;
+  font-weight: 700;
+}
+/* -------------------------- */
+.days {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  width: 380px;
+  display: flex;
+  padding: 20px;
+}
+.stats {
+  height: 50%;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.25);
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 3fr);
+  gap: 20px;
+}
+.stat {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  padding: 20px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.stat-header {
+  padding: 5px;
+  font-weight: 700;
+}
+.temp-stat > img {
+  width: 100px;
+}
+.digit {
+  height: 90px;
+  width: 90px;
+  font-size: 80px;
+}
+.time-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.time-box > div {
+  font-weight: 800;
+  font-size: 20px;
+}

@@ -1,0 +1,127 @@
+<div class="body">
+  <nav>
+    <div class="logo"></div>
+    <div class="navtools">
+      <div class="dashboard"></div>
+      <div class="hightlights"></div>
+      <div class="location"></div>
+      <div class="calender"></div>
+      <div class="settings"></div>
+    </div>
+    <div class="contact">
+      <div class="help"></div>
+      <div class="profile"></div>
+    </div>
+  </nav>
+  <main>
+    <div class="cover">
+      <div class="day">
+        <form>
+          <input
+            name="location"
+            [(ngModel)]="userRequest.location"
+            type="search"
+            placeholder="Search Loction"
+          />
+          <input
+            name="time"
+            [(ngModel)]="userRequest.time"
+            type="text"
+            min="1"
+            max="12"
+          />
+          <div class="btns">
+            <button type="submit" (click)="onSave()" class="SubmitBtn">
+              »
+            </button>
+          </div>
+        </form>
+
+        <div class="info">
+          <div>
+            <div class="place">{{data["address"] | uppercase}}</div>
+            <div class="weather-text">{{data["days"][0]["conditions"]}}</div>
+            <div class="temperature">{{data["days"][0]["temp"]}}℃</div>
+          </div>
+          <div class="weather-icon">
+            <img src="/night.png" height="200" alt="" />
+          </div>
+        </div>
+        <div class="stats">
+          <div class="stat temp-stat">
+            <img src="/hot.png" alt="" />
+            <div class="time-box">
+              <br /><br />
+              <div>{{current | date:"hh:mm"}}</div>
+              <div>PM</div>
+            </div>
+          </div>
+          <div class="stat">
+            <div class="stat-header">Humidity</div>
+            <div class="digit humidity">34</div>
+          </div>
+          <div class="stat">
+            <div class="stat-header">Humidity</div>
+            <div class="digit wind">34</div>
+          </div>
+          <div class="stat">
+            <div class="stat-header">Humidity</div>
+            <div class="digit rain">34</div>
+          </div>
+        </div>
+      </div>
+      <div class="week">
+        <div class="days" *ngFor="let day of days">
+          <p>Monday</p>
+          <img src="/rain at night.png" height="40" alt="" />
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+<!-- first -->
+<!-- <p>Data Works!</p>
+<button (click)="getData()" class="get-data-button">Get Data</button>
+
+<main class="container" (submit)="onSave()">
+  <form [formGroup]="locationForm">
+    <div class="form-group">
+      <label for="location">Location:</label>
+      <input type="text" formControlName="location" />
+    </div>
+    <div class="form-group">
+      <label for="time">time:</label>
+      <input type="time" formControlName="time" />
+    </div>
+    <div class="btns">
+      <button type="submit" class="SubmitBtn">Submit</button>
+      <button type="submit" class="ResetBtn">Reset</button>
+    </div>
+  </form>
+</main>
+<div class="head-card">
+  <div class="place">Place: {{ data["address"] }}</div>
+  <div class="latitude">latitude: {{ data["latitude"] }}</div>
+  <div class="longitude">longitude: {{ data["longitude"] }}</div>
+  <div class="timezone">timezone: {{ data["timezone"] }}</div>
+
+  <div class="temperture">
+    <div class="hours">datetime: {{ data["days"][0]["datetime"] }}</div>
+    <div class="hours">conditions: {{ data["days"][0]["conditions"] }}</div>
+    <div class="hours">icon: {{ data["days"][0]["icon"] }}</div>
+    <div class="hours">humidity: {{ data["days"][0]["humidity"] }}</div>
+    <div class="hours">tempmax: {{ data["days"][0]["tempmax"] }}℃</div>
+    <div class="hours">tempmin: {{ data["days"][0]["tempmin"] }}℃</div>
+    <div class="hours">
+      datetime: {{ data["days"][0]["hours"][0]["datetime"] }} O'clock
+    </div>
+    <div class="hours">
+      temperture: {{ data["days"][0]["hours"][0]["temp"] }}℃
+    </div>
+    <div class="hours">
+      humidity: {{ data["days"][0]["hours"][0]["humidity"] }}
+    </div>
+  </div>
+</div> -->
